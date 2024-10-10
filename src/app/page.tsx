@@ -1,13 +1,16 @@
-import Sidebar from "@/components/Sidebar";
+import { BackgroundBeamsWithCollisionDemo } from "@/components/profile";
+import { SidebarDemo } from "@/components/Sidebar";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex">
-      <div>
-        <Sidebar />
+    <div className="w-full flex">
+      <div className="">
+        <SidebarDemo />
       </div>
-      <div>hello</div>
+      <div className="bg-slate-600 w-full">
+        <BackgroundBeamsWithCollisionDemo />
+      </div>
     </div>
   );
 }
