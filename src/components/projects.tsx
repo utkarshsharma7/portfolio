@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-// import { useOutsideClick } from "@/hooks/use-outside-click";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
 export function ExpandableCardDemo() {
@@ -45,21 +44,15 @@ export function ExpandableCardDemo() {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100]">
+          <div className="fixed inset-0 grid place-items-center z-[100]">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               exit={{
                 opacity: 0,
-                transition: {
-                  duration: 0.05,
-                },
+                transition: { duration: 0.05 },
               }}
               className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
               onClick={() => setActive(null)}
@@ -69,22 +62,26 @@ export function ExpandableCardDemo() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[800px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
+              <motion.div
+                layoutId={`image-${active.title}-${id}`}
+                className="relative w-full"
+              >
                 <Image
                   priority
-                  width={200}
-                  height={200}
+                  width={850}
+                  height={450}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-full aspect-[16/9] sm:rounded-tr-lg sm:rounded-tl-lg object-cover"
+                  quality={95}
                 />
               </motion.div>
 
               <div>
                 <div className="flex justify-between items-start p-4">
-                  <div className="">
+                  <div>
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
                       className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
@@ -129,22 +126,26 @@ export function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
-        {cards.map((card, index) => (
+      <ul className="max-w-4xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-6">
+        {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col  w-full">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
+            <div className="flex gap-4 flex-col w-full">
+              <motion.div
+                layoutId={`image-${card.title}-${id}`}
+                className="relative w-full"
+              >
                 <Image
-                  width={100}
-                  height={100}
+                  width={630}
+                  height={338}
                   src={card.src}
                   alt={card.title}
-                  className="h-60 w-full  rounded-lg object-cover object-top"
+                  className="rounded-lg w-full aspect-[16/9] object-cover"
+                  quality={90}
                 />
               </motion.div>
               <div className="flex justify-center items-center flex-col">
@@ -172,17 +173,11 @@ export function ExpandableCardDemo() {
 export const CloseIcon = () => {
   return (
     <motion.svg
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{
         opacity: 0,
-        transition: {
-          duration: 0.05,
-        },
+        transition: { duration: 0.05 },
       }}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -205,8 +200,31 @@ export const CloseIcon = () => {
 const cards = [
   {
     description: "Lana Del Rey",
-    title: "Summertime Sadness",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    title: "Saas Application",
+    src: "/projects/saas.JPG",
+    ctaText: "Visit",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Youtube backend with integrated twitter features",
+    src: "/projects/YT+Twitter.JPG",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -228,8 +246,8 @@ const cards = [
   },
   {
     description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
+    title: "Centralised Medical History",
+    src: "/projects/medicalHistory.JPG",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -251,8 +269,8 @@ const cards = [
 
   {
     description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
+    title: "Tour and Travels",
+    src: "/projects/travels.JPG",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -273,8 +291,30 @@ const cards = [
   },
   {
     description: "Lord Himesh",
-    title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+    title: "Music School",
+    src: "/projects/music.JPG",
+    ctaText: "Visit",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Himesh Reshammiya, a renowned Indian music composer, singer, and
+          actor, is celebrated for his distinctive voice and innovative
+          compositions. Born in Mumbai, India, he has become a prominent figure
+          in the Bollywood music industry. <br /> <br /> His songs often feature
+          a blend of contemporary and traditional Indian music, capturing the
+          essence of modern Bollywood soundtracks. With a career spanning over
+          two decades, Himesh Reshammiya has released numerous hit albums and
+          singles that have garnered him a massive fan following both in India
+          and abroad.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lord Himesh",
+    title: "Apni-shop",
+    src: "/projects/apni-shop.JPG",
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
