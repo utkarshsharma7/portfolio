@@ -3,6 +3,7 @@
 import { SignupFormDemo } from "@/components/contact";
 import { TimelineDemo } from "@/components/experience";
 import BackgroundBeamsWithCollisionDemo from "@/components/profile";
+import { ExpandableCardDemo } from "@/components/projects";
 import { SidebarDemo } from "@/components/Sidebar";
 import { AnimatedTooltipPreview } from "@/components/skills";
 import { FloatingDockDemo } from "@/components/socials";
@@ -27,6 +28,7 @@ export default function Home() {
         <div className="flex-1 bg-slate-600 overflow-y-auto h-full">
           <BackgroundBeamsWithCollisionDemo />
           <TimelineDemo />
+          <ExpandableCardDemo />
           <AnimatedTooltipPreview />
           <SignupFormDemo />
         </div>
