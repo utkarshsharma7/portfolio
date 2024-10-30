@@ -134,7 +134,7 @@ export function ExpandableCardDemo() {
             onClick={() => setActive(card)}
             className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col w-full">
+            <div className="flex gap-4 p-4 flex-col w-full">
               <motion.div
                 layoutId={`image-${card.title}-${id}`}
                 className="relative w-full"
@@ -157,7 +157,7 @@ export function ExpandableCardDemo() {
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
+                  className="text-neutral-600 pb-4 dark:text-neutral-400 text-center md:text-left text-base"
                 >
                   {card.description}
                 </motion.p>
@@ -198,121 +198,97 @@ export const CloseIcon = () => {
 };
 
 const cards = [
+  //   {
+  //     description: "Lana Del Rey",
+  //     title: "Saas Application",
+  //     src: "/projects/saas.JPG",
+  //     ctaText: "Visit",
+  //     ctaLink: "https://ui.aceternity.com/templates",
+  //     content: () => {
+  //       return (
+  //         <p>
+  //           Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+  //           her melancholic and cinematic music style. Born Elizabeth Woolridge
+  //           Grant in New York City, she has captivated audiences worldwide with
+  //           her haunting voice and introspective lyrics. <br /> <br /> Her songs
+  //           often explore themes of tragic romance, glamour, and melancholia,
+  //           drawing inspiration from both contemporary and vintage pop culture.
+  //           With a career that has seen numerous critically acclaimed albums, Lana
+  //           Del Rey has established herself as a unique and influential figure in
+  //           the music industry, earning a dedicated fan base and numerous
+  //           accolades.
+  //         </p>
+  //       );
+  //     },
+  //   },
   {
-    description: "Lana Del Rey",
-    title: "Saas Application",
-    src: "/projects/saas.JPG",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
-        </p>
-      );
-    },
-  },
-  {
-    description: "Lana Del Rey",
-    title: "Youtube backend with integrated twitter features",
+    description: "Youtube backend with integrated twitter features",
+    title: "Youtube Backend",
     src: "/projects/YT+Twitter.JPG",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://github.com/utkarshsharma7/youtube-backend",
     content: () => {
       return (
         <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
+          This dynamic backend project merges YouTube and Twitter features,
+          delivering user management with authentication, profile customization,
+          watch history, and seamless content creation. Users can upload videos,
+          publish tweets, and manage playlists, subscriptions, and comments.
+          With real-time analytics, health checks, and content liking, it is a
+          full suite for media engagement. Built on Node.js, Express.js,
+          MongoDB, and Cloudinary, this project showcases robust functionality
+          and scalability, perfect for any media-driven platform.
         </p>
       );
     },
   },
   {
-    description: "Babbu Maan",
-    title: "Centralised Medical History",
+    description: "Upcoming project",
+    title: "Jeevanrakshak(Under development)",
     src: "/projects/medicalHistory.JPG",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    // ctaText: "Visit",
+    // ctaLink: "https://github.com/utkarshsharma7/hackwithuttarakhand",
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          The Emergency Medical History Access System is a secure, life-saving
+          platform designed for critical medical situations. It grants
+          healthcare providers rapid access to a patient’s full medical history
+          with consent from a designated caretaker. With blockchain-backed
+          record integrity, AI-driven risk assessment, and real-time
+          notifications, EMHAS enables informed decisions while safeguarding
+          patient privacy. Multi-tiered permissions and potential integration
+          with wearables keep data current, aiming to streamline emergency care
+          and enhance outcomes through faster, accurate, and privacy-conscious
+          medical support.
         </p>
       );
     },
   },
 
   {
-    description: "Metallica",
+    description: "A freelance project for a tour and travels company",
     title: "Tour and Travels",
     src: "/projects/travels.JPG",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://tour-travels-mauve.vercel.app/",
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
+          The platform includes a user-friendly system where inquiries and
+          contact numbers are directly emailed to the admin. An intuitive admin
+          dashboard allows for effortless addition of services or tours and
+          images can be uploaded without any coding changes, eliminating future
+          costs for modifications. Recent packages and plans can be easily
+          updated through this dashboard. Additionally, a blog page enables the
+          admin to showcase recent tours and share details, making the site
+          engaging for visitors.
         </p>
       );
     },
   },
   {
-    description: "Lord Himesh",
-    title: "Music School",
-    src: "/projects/music.JPG",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and
-          actor, is celebrated for his distinctive voice and innovative
-          compositions. Born in Mumbai, India, he has become a prominent figure
-          in the Bollywood music industry. <br /> <br /> His songs often feature
-          a blend of contemporary and traditional Indian music, capturing the
-          essence of modern Bollywood soundtracks. With a career spanning over
-          two decades, Himesh Reshammiya has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
-        </p>
-      );
-    },
-  },
-  {
-    description: "Lord Himesh",
+    description: "An e-commerce store",
     title: "Apni-shop",
     src: "/projects/apni-shop.JPG",
     ctaText: "Visit",
@@ -320,15 +296,31 @@ const cards = [
     content: () => {
       return (
         <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and
-          actor, is celebrated for his distinctive voice and innovative
-          compositions. Born in Mumbai, India, he has become a prominent figure
-          in the Bollywood music industry. <br /> <br /> His songs often feature
-          a blend of contemporary and traditional Indian music, capturing the
-          essence of modern Bollywood soundtracks. With a career spanning over
-          two decades, Himesh Reshammiya has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          Designed and developed an intuitive user interface that allows
+          seamless browsing through various item categories and a convenient
+          search bar, enabling users to add items to their cart effortlessly.
+          The project integrates the secure and user-friendly Stripe payment
+          platform for a smooth checkout experience, ensuring enhanced
+          transaction security and customer satisfaction. Built using HTML,
+          SASS, JavaScript, React.js, Strapi Headless CMS, and Stripe, this
+          project redefines online shopping efficiency and user experience.
+        </p>
+      );
+    },
+  },
+  {
+    description: "A Music course website",
+    title: "Music School",
+    src: "/projects/music.JPG",
+    ctaText: "Visit",
+    ctaLink: "https://music-school-lemon.vercel.app/",
+    content: () => {
+      return (
+        <p>
+          It is a frontend website built with Next.js and TypeScript, featuring
+          the Aeternity UI library. Designed for interactivity and aesthetic
+          appeal, this project offers an engaging user experience with sleek
+          visuals.
         </p>
       );
     },
