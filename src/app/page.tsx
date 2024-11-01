@@ -7,11 +7,15 @@ import { ExpandableCardDemo } from "@/components/projects";
 import { SidebarDemo } from "@/components/Sidebar";
 import { AnimatedTooltipPreview } from "@/components/skills";
 import { FloatingDockDemo } from "@/components/socials";
+import { Toaster } from "react-hot-toast";
+
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="relative">
+      <Toaster position="bottom-center" reverseOrder={false} />
+
       {/* Floating Dock - Responsive positioning */}
       <div className="fixed md:top-5 md:left-1/2 md:-translate-x-1/2 bottom-5 right-5 md:bottom-auto md:right-auto z-50">
         <FloatingDockDemo />

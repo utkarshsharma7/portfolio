@@ -1,19 +1,62 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
-import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
+import { toast } from "react-hot-toast";
 
 export function SignupFormDemo() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    setStatus("sending");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error("Failed to send message");
+
+      setStatus("success");
+      toast.success("Message sent successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setStatus("error");
+      toast.error("Failed to send message. Please try again.");
+    }
   };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl my-5 p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
@@ -22,18 +65,50 @@ export function SignupFormDemo() {
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
-            <Label htmlFor="firstname">Your name</Label>
-            <Input id="firstname" placeholder="Patrick Bateman" type="text" />
+            <Label htmlFor="name">Your name</Label>
+            <Input
+              id="name"
+              name="name"
+              placeholder="Patrick Bateman"
+              value={formData.name}
+              onChange={handleChange}
+              type="text"
+            />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Your Email</Label>
-          <Input id="email" placeholder="paul.allen@dorsia.com" type="email" />
+          <Input
+            id="email"
+            name="email"
+            placeholder="paul.allen@dorsia.com"
+            value={formData.email}
+            onChange={handleChange}
+            type="email"
+          />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">
           <Label htmlFor="subject">Subject</Label>
-          <Input id="subject" placeholder="Dorsia at 9?" type="text" />
+          <Input
+            id="subject"
+            name="subject"
+            placeholder="Dorsia at 9?"
+            value={formData.subject}
+            onChange={handleChange}
+            type="text"
+          />
+        </LabelInputContainer>
+        <LabelInputContainer className="mb-4">
+          <Label htmlFor="message">Message</Label>
+          <Input
+            id="message"
+            name="message"
+            placeholder="Looking forward to it!"
+            value={formData.message}
+            onChange={handleChange}
+            type="text"
+          />
         </LabelInputContainer>
 
         <button

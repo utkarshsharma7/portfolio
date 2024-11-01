@@ -98,7 +98,7 @@ export function TimelineDemo() {
     },
   ];
   return (
-    <div className="w-full py-10">
+    <div className="w-full my-10">
       <Timeline data={data} />
     </div>
   );
