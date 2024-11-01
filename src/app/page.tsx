@@ -9,8 +9,6 @@ import { AnimatedTooltipPreview } from "@/components/skills";
 import { FloatingDockDemo } from "@/components/socials";
 import { Toaster } from "react-hot-toast";
 
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="relative">

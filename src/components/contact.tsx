@@ -56,6 +56,7 @@ export function SignupFormDemo() {
       [name]: value,
     }));
   };
+  console.log(status);
 
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl my-5 p-4 md:p-8 shadow-input bg-white dark:bg-black">

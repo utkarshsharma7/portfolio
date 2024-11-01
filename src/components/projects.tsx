@@ -33,7 +33,7 @@ export function ExpandableCardDemo() {
   return (
     <>
       <h1 className="text-md md:text-2xl dark:text-gray-300 text-gray-900 text-center font-semibold">
-        What I've Built
+        What I have Built
       </h1>
       <AnimatePresence>
         {active && typeof active === "object" && (

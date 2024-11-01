@@ -2,7 +2,7 @@ import React from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
-import { Moon, Sun } from "lucide-react";
+// import { Moon, Sun } from "lucide-react";
 
 export default function BackgroundBeamsWithCollisionDemo() {
   const { theme, toggleTheme } = useTheme();
