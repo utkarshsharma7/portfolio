@@ -5,6 +5,9 @@ import {
   IconBrandX,
   IconExchange,
   IconHome,
+  IconBrandLinkedin,
+  IconBrandWhatsapp,
+  IconMail,
   IconNewSection,
   IconTerminal2,
 } from "@tabler/icons-react";
@@ -13,49 +16,42 @@ import Image from "next/image";
 export function FloatingDockDemo() {
   const links = [
     {
-      title: "Home",
+      title: "Linkedin",
       icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://www.linkedin.com/in/utkarsh-sharma-aa8701228/",
     },
 
     {
-      title: "Products",
+      title: "Github",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/utkarshsharma7",
     },
-    {
-      title: "Components",
-      icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
     {
       title: "Twitter",
       icon: (
         <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://x.com/utkarsh_HTML5",
     },
+
     {
-      title: "GitHub",
+      title: "Mail",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "mailto:utkarsh.sharma7696@gmail.com",
+    },
+
+    {
+      title: "Whatsapp",
+      icon: (
+        <IconBrandWhatsapp className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://wa.me/6395532309",
     },
   ];
   return (
