@@ -59,7 +59,7 @@ export function SignupFormDemo() {
   console.log(status);
 
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl my-5 p-4 md:p-8 shadow-input bg-white dark:bg-black">
+    <div className="max-w-sm w-[95%] mx-2 md:mx-auto md:rounded-2xl my-5 p-4 md:p-8 rounded-lg shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         I am available for a chitchat anytime
       </h2>
