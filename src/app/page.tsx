@@ -12,12 +12,9 @@ import { Toaster } from "react-hot-toast";
 export default function Home() {
   return (
     <div className="relative">
-      <Toaster position="bottom-center" reverseOrder={false} />
+      <Toaster position="top-center" reverseOrder={false} />
 
       {/* Floating Dock - Responsive positioning */}
-      <div className="fixed md:top-5 md:left-1/2 md:-translate-x-1/2 bottom-5 right-5 md:bottom-auto md:right-auto z-50">
-        <FloatingDockDemo />
-      </div>
 
       {/* Main Layout */}
       <div className="flex w-full h-screen">
@@ -34,6 +31,9 @@ export default function Home() {
           <AnimatedTooltipPreview />
           <SignupFormDemo />
         </div>
+      </div>
+      <div className="fixed bottom-28 right-4 md:top-5 md:left-1/2 md:-translate-x-1/2 z-50">
+        <FloatingDockDemo />
       </div>
     </div>
   );
