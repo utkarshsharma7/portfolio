@@ -32,7 +32,7 @@ export default function Home() {
           <SignupFormDemo />
         </div>
       </div>
-      <div className="fixed bottom-28 right-4 md:top-5 md:left-1/2 md:-translate-x-1/2 z-50">
+      <div className="fixed right-4 md:top-5 md:left-1/2 md:-translate-x-1/2 z-50">
         <FloatingDockDemo />
       </div>
     </div>
