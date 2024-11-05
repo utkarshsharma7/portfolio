@@ -1,11 +1,11 @@
 import React from "react";
 // import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import Image from "next/image";
-import { useTheme } from "@/context/ThemeContext";
+// import Image from "next/image";
+// import { useTheme } from "@/context/ThemeContext";
 // import { Moon, Sun } from "lucide-react";
 
 export default function BackgroundBeamsWithCollisionDemo() {
-  const { theme, toggleTheme } = useTheme();
+  // const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="flex flex-col h-[60%] md:flex-row w-full items-center justify-between bg-gray-200 dark:bg-gray-800 transition-colors p-4 md:p-0">
