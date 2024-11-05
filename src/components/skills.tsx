@@ -79,7 +79,10 @@ const people = [
 
 export function AnimatedTooltipPreview() {
   return (
-    <div className="flex flex-col items-center justify-center my-10 py-10 bg-gray-800 mb-10 w-full">
+    <div
+      id="skills"
+      className="flex flex-col items-center justify-center my-10 py-10 bg-gray-800 mb-10 w-full"
+    >
       <h1 className="text-md md:text-2xl dark:text-gray-300 text-gray-900 text-center font-semibold mb-10">
         Also, coming to my tech stack I&apos;m proficient in{" "}
       </h1>

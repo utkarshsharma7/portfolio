@@ -8,7 +8,7 @@ export default function BackgroundBeamsWithCollisionDemo() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="h-auto py-6 md:py-10">
+    <div id="profile" className="h-auto py-6 md:py-10">
       <BackgroundBeamsWithCollision>
         <div className="flex flex-col md:flex-row w-full items-center justify-between bg-gray-200 dark:bg-gray-800 transition-colors p-4 md:p-0">
           {/* Mobile Theme Toggle */}

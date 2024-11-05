@@ -11,7 +11,7 @@ import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative h-full">
       <Toaster position="top-center" reverseOrder={false} />
 
       {/* Floating Dock - Responsive positioning */}

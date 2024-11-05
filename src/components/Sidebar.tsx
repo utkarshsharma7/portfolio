@@ -47,35 +47,35 @@ export function SidebarDemo() {
   const links = [
     {
       label: "Profile",
-      href: "#profile-section", // Anchor link to the section
+      href: "#profile", // Anchor link to the section
       icon: (
         <IconUserCircle className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Experience",
-      href: "#experience-section", // Anchor link to the section
+      href: "#experience", // Anchor link to the section
       icon: (
         <IconBriefcase2 className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Projects",
-      href: "#projects-section", // Anchor link to the section
+      href: "#projects", // Anchor link to the section
       icon: (
         <IconPencilPlus className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Skills",
-      href: "#skills-section", // Anchor link to the section
+      href: "#skills", // Anchor link to the section
       icon: (
         <IconCode className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Contact",
-      href: "#contact-section", // Anchor link to the section
+      href: "#contact", // Anchor link to the section
       icon: (
         <IconPhone className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
