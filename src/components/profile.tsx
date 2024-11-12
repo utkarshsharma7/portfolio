@@ -10,12 +10,12 @@ export default function BackgroundBeamsWithCollisionDemo() {
   return (
     <div
       id="profile"
-      className="flex flex-col h-[60%] md:flex-row w-full items-center justify-between bg-gray-200 dark:bg-gray-800 transition-colors p-4 md:p-0"
+      className="flex flex-col h-[60%] md:flex-row w-full items-center justify-between bg-slate-300 dark:bg-gray-800 transition-colors p-4 md:p-0"
     >
       {/* Mobile Theme Toggle */}
 
       {/* Content Section */}
-      <div className="w-full md:w-2/3 mx-3 md:mx-5">
+      <div className="w-full md:w-2/3 mx-3 lg:mx-5 mt-20 lg:mt-0">
         <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white font-sans tracking-tight">
           Hey there 👋
         </h2>
