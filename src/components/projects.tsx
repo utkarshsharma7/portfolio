@@ -57,7 +57,7 @@ export function ExpandableCardDemo() {
                 opacity: 0,
                 transition: { duration: 0.05 },
               }}
-              className="flex absolute top-10 z-50 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              className="flex absolute top-8 z-50 right-4 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
