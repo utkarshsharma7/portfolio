@@ -129,18 +129,18 @@ export function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-4xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-6">
+      <ul className="max-w-4xl mx-auto w-[90%] md:w-full grid grid-cols-1 md:grid-cols-2 items-start gap-6">
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col dark:bg-slate-600 bg-slate-200 hover:bg-neutral-100/50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-2 md:px-4 py-4 flex flex-col dark:bg-slate-600 bg-slate-200 hover:bg-neutral-100/50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 p-4 flex-col w-full">
+            <div className="flex gap-4 p-2 md:p-4 flex-col mx-auto w-[90%] md:w-full">
               <motion.div
                 layoutId={`image-${card.title}-${id}`}
-                className="relative w-full"
+                className="relative w-[90%] mx-auto md:w-full"
               >
                 <Image
                   width={630}

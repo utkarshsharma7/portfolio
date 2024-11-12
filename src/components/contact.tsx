@@ -61,7 +61,7 @@ export function SignupFormDemo() {
   return (
     <div
       id="contact"
-      className="max-w-sm lg:max-w-lg mx-auto lg:w-[95%] md:mx-auto md:rounded-2xl my-5 p-4 md:p-8 rounded-lg shadow-input bg-white dark:bg-black"
+      className="max-w-sm lg:max-w-lg mx-auto w-[95%] md:mx-auto md:rounded-2xl my-5 p-4 md:p-8 rounded-lg shadow-input bg-white dark:bg-black"
     >
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Open for Conversations and Opportunities
