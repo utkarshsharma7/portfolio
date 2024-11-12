@@ -168,7 +168,7 @@ export const MobileSidebar = ({
         </AnimatePresence>
       </div>
       {/* Add spacing below the fixed header */}
-      <div className="h-16 lg:hidden" />
+      {/* <div className="h-16 lg:hidden" /> */}
     </>
   );
 };
@@ -182,7 +182,15 @@ export const SidebarLink = ({
   className?: string;
   props?: LinkProps;
 }) => {
-  const { open, animate } = useSidebar();
+  const { open, setOpen, animate } = useSidebar();
+
+  const handleLinkClick = () => {
+    // Check if we're in the mobile view (open sidebar)
+    if (open) {
+      setOpen(false); // Close the sidebar
+    }
+  };
+
   return (
     <Link
       href={link.href}
@@ -191,6 +199,7 @@ export const SidebarLink = ({
         className
       )}
       {...props}
+      onClick={handleLinkClick}
     >
       {link.icon}
 
