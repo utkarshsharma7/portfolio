@@ -64,7 +64,7 @@ export function SignupFormDemo() {
       className="max-w-sm w-[95%] mx-2 md:mx-auto md:rounded-2xl my-5 p-4 md:p-8 rounded-lg shadow-input bg-white dark:bg-black"
     >
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        I am available for a chitchat anytime
+        Open for Conversations and Opportunities
       </h2>
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
