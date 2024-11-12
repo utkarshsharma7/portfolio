@@ -91,7 +91,7 @@ export const DesktopSidebar = ({
     <>
       <motion.div
         className={cn(
-          "px-4 py-4 hidden md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[250px] flex-shrink-0",
+          "px-4 py-4 hidden lg:flex lg:flex-col bg-neutral-100 dark:bg-neutral-800 w-[220px] flex-shrink-0",
           className
         )}
         animate={{
@@ -119,14 +119,14 @@ export const MobileSidebar = ({
     <>
       <div
         className={cn(
-          "h-16 px-6 py-4 flex flex-row md:hidden justify-between items-center bg-neutral-100 dark:bg-neutral-800 w-full fixed top-0 right-0 z-50"
+          "h-16 px-6 py-4 flex flex-row lg:hidden justify-between items-center bg-neutral-100 dark:bg-neutral-800 w-full fixed top-0 right-0 z-50"
         )}
         {...props}
       >
         <div>
           <button
             onClick={toggleTheme}
-            className="md:hidden self-end p-2 rounded-lg bg-gray-300 dark:bg-gray-700 transition-colors"
+            className="lg:hidden self-end p-2 rounded-lg bg-gray-300 dark:bg-gray-700 transition-colors"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (
@@ -168,7 +168,7 @@ export const MobileSidebar = ({
         </AnimatePresence>
       </div>
       {/* Add spacing below the fixed header */}
-      <div className="h-16 md:hidden" />
+      <div className="h-16 lg:hidden" />
     </>
   );
 };
