@@ -8,7 +8,12 @@ import {
   IconMail,
 } from "@tabler/icons-react";
 
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
+
 export function FloatingDockDemo() {
+  const { theme, toggleTheme } = useTheme();
+
   const links = [
     {
       title: "Linkedin",
@@ -47,6 +52,20 @@ export function FloatingDockDemo() {
         <IconBrandWhatsapp className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://wa.me/6395532309",
+    },
+    {
+      title: "Theme",
+      icon:
+        theme === "dark" ? (
+          <Sun className="h-6 w-6 text-yellow-500" />
+        ) : (
+          <Moon className="h-6 w-6 text-gray-700" />
+        ),
+      href: "",
+      onClick: (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault(); // Prevent default action
+        toggleTheme(); // Toggle theme
+      },
     },
   ];
   return (
