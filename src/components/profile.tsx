@@ -21,7 +21,7 @@ export default function BackgroundBeamsWithCollisionDemo() {
         </h2>
         <div className="py-4">
           <p className="text-lg md:text-xl font-medium text-black dark:text-[#ffeffe] ">
-            I'm Utkarsh Sharma, a full stack developer from Agra. I&apos;ve
+            I&apos;m Utkarsh Sharma, a full stack developer from Agra. I&apos;ve
             built a range of projects, including blogging sites, eCommerce
             platforms, and application tracking systems, with a focus on clean,
             user-friendly interfaces.
