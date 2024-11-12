@@ -67,13 +67,18 @@ const FloatingDockMobile = ({
                 }}
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
-                <Link
-                  href={item.href}
-                  key={item.title}
-                  className="h-12 w-12 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
-                >
-                  <div className="h-8 w-8">{item.icon}</div>
-                </Link>
+                {item.href ? (
+                  <div>
+                    {" "}
+                    <Link
+                      href={item.href}
+                      key={item.title}
+                      className="h-12 w-12 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
+                    >
+                      <div className="h-8 w-8">{item.icon}</div>
+                    </Link>
+                  </div>
+                ) : null}
               </motion.div>
             ))}
           </motion.div>
