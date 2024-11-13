@@ -31,7 +31,10 @@ export default function BackgroundBeamsWithCollisionDemo() {
 
       {/* Desktop SVG Section - Hidden on Mobile */}
       <div className="hidden relative w-1/3 h-lvh lg:scale-75 laptop:translate-y-8 lg:block  xl:scale-100 2xl:mt-72 xl:translate-y-12 laptop-lg:translate-y-0  laptop-2xl:-translate-y-5  desktop:-translate-y-20 desktop-lg:translate-y-10 desktop-xl:scale-110 desktop-xl:translate-y-56">
-        <div className="absolute top-10 z-50" onClick={toggleTheme}>
+        <div
+          className="absolute top-10 z-50 cursor-pointer"
+          onClick={toggleTheme}
+        >
           <Image src="/bulb/setup.svg" alt="" width={420} height={550} />
         </div>
         {theme === "dark" && (
