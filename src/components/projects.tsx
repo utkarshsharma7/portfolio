@@ -225,6 +225,27 @@ const cards = [
   //     },
   //   },
   {
+    description: "Uber full stack clone",
+    title: "Uber",
+    src: "/projects/Uber.JPG",
+    ctaText: "Visit",
+    ctaLink: "https://uber-blue.vercel.app/",
+    content: () => {
+      return (
+        <p>
+          This Uber clone is a full-stack ride-hailing platform built with a
+          React frontend (Vite, Tailwind CSS, LocationIQ, Leaflet) and an
+          Express backend (MongoDB, Mongoose, JWT authentication, WebSockets).
+          It features real-time ride tracking using LocationIQ and Leaflet,
+          seamless WebSocket-based communication via Socket.io, and secure
+          authentication with JWT and bcrypt. The platform allows users to book
+          rides with cab, auto and bike in real time, and receive instant
+          updates, offering a smooth and interactive ride-hailing experience.
+        </p>
+      );
+    },
+  },
+  {
     description: "Youtube backend with integrated twitter features",
     title: "Youtube Backend",
     src: "/projects/YT+Twitter.JPG",
